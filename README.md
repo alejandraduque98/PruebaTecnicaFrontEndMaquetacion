@@ -16,7 +16,7 @@ Se trabajó un modal para el botón de ingresar con el fin de que este le muestr
 ## Modal Registro
 Se trabajó un modal para el botón de registro con el fin de que este le muestre al usuario un formulario con los campos Nombre completo y contraseña con el fin de que el usuario pueda registrarse y entrar al sitio.
 
-![Ingresar](Presentacion/Registro.png)
+![Resgitrarse](Presentacion/Resgistro.png)
 
 ## Lenguajes Usados
 
