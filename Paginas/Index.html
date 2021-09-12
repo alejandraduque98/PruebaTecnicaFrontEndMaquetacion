@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--Hoja de estilos css-->
+    <link rel="stylesheet" href="../Css/Estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Kautos</title>
+</head>
+
+<body>
+    <!--Div contenedor NavBar-->
+    <div class="container-fluid fixed-top py-1" id="fondo">
+        <!--Nav-Bar-->
+        <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg " id="fondo">
+            <a class="navbar-brand" href="#">
+                <img src="../Imagenes/LOGO3.JPG" class="img-fluid" width="150px" height="50%" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!--  <form class="form-inline my-2 my-lg-0">-->
+            <!--Input+boton deplegable-->
+            <div class="input-group " id="grupo">
+                <div class="input-group-prepend ">
+                    <!--Boton Cursos-->
+                    <button class="btn btn-outline-secondary dropdown-toggle text-white sm-2" id="Botones" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" id="tipografia"
+                        aria-expanded="false">Cursos</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="NavBar" placeholder="Buscar"
+                    aria-label="Text input with dropdown button">
+
+                <!--Boton Busqueda Input-->
+
+                <button class="btn sm-2" id="Botones" type="button" id="button-addon2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16" style="color: aliceblue;">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+
+                <!--Boton Buqueda Input-->
+
+                <!--Boton Ingresar-->
+                <button type="button" class="btn btn-link text-white font-weight-bold ml-auto" id="btnPersona"
+                    data-toggle="modal" data-target="#myModal">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    Ingresar
+                </button>
+                <!--/Boton Ingresar-->
+
+
+                <!--Boton Registrarse-->
+                <button type="button" class="btn rounded-pill text-white font-weight-bold  ml-auto" id="Botones"
+                    data-toggle="modal" data-target="#myModal2">Registrarse</button>
+                <!--Boton Registrarse-->
+
+                <!--Boton CarritoCompras-->
+                <button type="button" class="btn btn-link text-white font-weight-bold ml-auto" id="btnPersona">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                        class="bi bi-cart4" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                    </svg>
+                </button>
+
+
+            </div>
+            <!--/Input+boton deplegable-->
+
+            <!-- </form>-->
+
+        </nav>
+        <!--/Nav-Bar-->
+    </div>
+    <!--/Div Contenedor NavBar-->
+
+    <!-- modal ingresar -->
+    <div class="modal" id="myModal"">
+        <div class=" modal-dialog ">
+            <div class=" modal-content">
+
+        <!-- Modal Header -->
+        <div class=" modal-header">
+            <h4 class="modal-title" id="TextoModal">Ingresar</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" ">
+            <!--Formulario-->
+                <form>
+                 <div class=" form-group">
+            <label for="exampleInputEmail1" id="TextoModal">Correo electronico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" id="TextoModal">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <button type="button" class="btn  btn-link" id="TextoModal" style="margin-left:25% ;">¿Olvidaste tu
+            contraseña?</button>
+
+        <button type="submit" id="Botones" class="btn d-block m-auto btn-lg text-white"
+            style="width: 50%;">Ingresar</button>
+
+        <button type="button" class="btn btn-link" id="TextoModal" style="margin-left:10% ;">¿Aún no haces parte?
+            Regístrate aquí</button>
+        </form>
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- modal2 ingresar -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Registrarse</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!--Formulario-->
+                    <form>
+                        <div class=" form-group">
+                            <label for="exampleInputEmail1" id="TextoModal">Nombre Completo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class=" form-group">
+                            <label for="exampleInputEmail1" id="TextoModal">Nombre Completo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" id="TextoModal">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" id="TextoModal" for="exampleCheck1">Acepto Términos y
+                                condiciones</label>
+                        </div>
+
+
+                        <button type="submit" id="Botones" class="btn d-block m-auto btn-lg text-white"
+                            style="width: 50%;">Ingresar</button>
+
+                        <button type="button" class="btn btn-link" id="TextoModal" style="margin-left:10% ;">¿Aún no
+                            haces parte?
+                            Regístrate aquí</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Div training Park-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide " data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Imagenes/Park.JPG" id="sliderT" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <!--/Div training Park-->
+
+    <!--Lorem-->
+
+    <div class="row mx-3 my-4 p-3">
+        <!--texto-->
+        <p class="text-center px-5 " id="Texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae libero rerum eos eum? Dicta
+            quis
+            beatae minima explicabo itaque, provident repudiandae iste in. Ducimus itaque voluptas pariatur nam
+            quis.
+        </p>
+        <!--Flexibilidad-->
+        <div class="col-2 mx-3">
+            <img src="../Imagenes/Flexibilidad.JPG" alt="" class="img-fluid rounded mx-auto">
+            <p class="text-center">FLEXIBILIDAD DE TIEMPOS PARA ESTUDIAR</p>
+        </div>
+        <!--Cursos-->
+        <div class="col-2 mx-3">
+            <img src="../Imagenes/cursos.JPG" alt="" class="img-fluid rounded mx-auto">
+            <p class="text-center">CURSOS Y MÓDULOS CORTOS</p>
+        </div>
+        <!--Certificado-->
+        <div class="col-2 mx-3">
+            <img src="../Imagenes/Certificado.JPG" alt="" class="img-fluid rounded mx-auto">
+            <p class="text-center">CERTIFICADO DE APROBACIÓN</p>
+        </div>
+        <!--Formacion-->
+        <div class="col-2 mx-3">
+            <img src="../Imagenes/Formacion.JPG" alt="" class="img-fluid rounded mx-auto">
+            <p class="text-center">FORMACIÓN ACTUALIZADA</p>
+        </div>
+        <!--Acceso-->
+        <div class="col-2 mx-3">
+            <img src="../Imagenes/Acceso.JPG" alt="" class="img-fluid rounded mx-auto">
+            <p class="text-center">ACCESO DESDE CUALQUIER LUGAR</p>
+        </div>
+    </div>
+    <!--/Lorem-->
+
+    <!--Módulos recientes-->
+    <div class="container-fluid pt-3 pb-5" id="modulosRecientes">
+        <h1 class="text-white pt-5 pb-5">Módulos recientes</h1>
+
+        <div class="card-deck">
+            <div class="card h-100">
+                <img src="../Imagenes/Alimentacion.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text ml-auto"><small class="text-muted">$150.000</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card h-100">
+                <img src="../Imagenes/Primerosauxilios.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text ml-auto"><small class="text-muted">$150.000</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card h-100">
+                <img src="../Imagenes/RecienNacido.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text ml-auto"><small class="text-muted">$150.000</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card h-100">
+                <img src="../Imagenes/Juegos.JPG" class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text ml-auto"><small class="text-muted">$150.000</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Módulos recientes-->
+
+    <!--Call to Action-->
+    <div class="container-fluid py-5" id="calltoact">
+        <div class="row">
+            <div class="col-7">
+                <img src="../Imagenes/CalltoAction.JPG" alt="...">
+            </div>
+            <div class="col-5 text-center">
+                <h1 class="py-5 mt-5 text-white">Call to Action</h1>
+                <p class="card-text-center py-1">Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+                    euismod dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+                    euismod dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+
+                </p>
+                <button type="button" class="btn rounded-pill btn-lg text-white font-weight-bold " id="Botones"
+                    style="width:50%; ">Registrarse</button>
+            </div>
+        </div>
+    </div>
+    <!--/Call to Action-->
+
+    <!--Procximos eventos-->
+    <div class="container-fluid">
+        <div class="text-center">
+            <h2>Próximos Eventos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore
+                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis.</p>
+        </div>
+        <div class="row py-3">
+            <div class="col-6">
+                <div class="media h-100" id="card22">
+                    <img src="../Imagenes/22.JPG" class="mr-3 h-100 img-fluid " id="card22" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">Media heading</h5>
+                        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's
+                            beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me.
+                            Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="media h-100" id="card22">
+                    <img src="../Imagenes/22.JPG" class="mr-3 h-100 img-fluid " id="card22" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">Media heading</h5>
+                        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's
+                            beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me.
+                            Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-6">
+                <div class="media h-100" id="card22">
+                    <img src="../Imagenes/22.JPG" class="mr-3 h-100 img-fluid " id="card22" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">Media heading</h5>
+                        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's
+                            beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me.
+                            Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="media h-100" id="card22">
+                    <img src="../Imagenes/22.JPG" class="mr-3 h-100 img-fluid " id="card22" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">Media heading</h5>
+                        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's
+                            beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me.
+                            Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <button type="button" class="btn btn-link ml-auto py-5" id="verEventos">
+                Ver todos los eventos
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid py-5" id="footer">
+        <footer class=" text-white py-5" id="footer">
+            <a class="navbar-brand" href="#">
+                <img src="../Imagenes/Logo.JPG" width="150px" height="50%" alt="">
+            </a>
+            <div class="row">
+                <div class="col-4">
+
+                    <a href="#" class=" text-white d-block"> Quiénes somos</a>
+                    <a href="#" class=" text-white d-block"> Cursos</a>
+                    <a href="#" class=" text-white d-block"> Contáctanos</a>
+
+                </div>
+                <div class="col-4 d-block">
+                    <a href="#" class=" text-white d-block"> Preguntas frecuentes </a>
+                    <a href="#" class=" text-white d-block"> Política de privacidad </a>
+                    <a href="#" class="text-white d-block"> Terminos y condiciones </a>
+                </div>
+                <div class="col-4 text-white">
+                    <div class="row">
+                        <div class="col-12 ml-5">
+                            Siguenos en:
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            Medios de pago:
+                            <i class="bi bi-credit-card"></i>
+                            <i class="bi bi-credit-card-2-back-fill"></i>
+                            <i class="bi bi-credit-card-2-front"></i>
+                            <i class="bi bi-credit-card "></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    </footer>
+    <div class="container-fluid py-5">
+
+    </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

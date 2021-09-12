@@ -1,0 +1,54 @@
+@font-face {
+    font-family:MyriadPro;
+    src: url(../Fonts/MyriadPro-Regular.otf);
+}
+#Botones{
+    background-color:#6d4a99 ;
+    border-color: #6d4a99;
+}
+
+/*Fondo del Navbar*/
+#fondo {
+    background-color:#9DBA01 ;
+}
+
+#NavBar{
+    max-width: 450px;
+    position: relative;
+    border:solid 1px white;
+}
+#grupo{
+    margin-left: 100px;
+    
+}
+#Texto{
+    color: #6d4a99;
+    font-size: 25px;
+}
+#modulosRecientes{
+    background-color:#df8801;
+}
+#calltoact{
+    background-color:#9DBA01;
+}
+
+#card22{
+    border-style: solid  solid  solid none; 
+    border-radius: 19px;
+    border-color:  #df8801;
+}
+
+#verEventos{
+    color: #df8801;
+}
+#footer{
+    background-color: #6d4a99;
+}
+
+#TextoModal{
+    color: #6d4a99;
+}
+#tipografia{
+    font-family: myriad-pro, sans-serif;
+}
+
